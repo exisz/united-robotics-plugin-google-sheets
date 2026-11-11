@@ -3,3 +3,13 @@
 .ur-sheets-embed input,.ur-sheets-embed button,.ur-sheets-embed select{font:inherit;color:inherit;background:color-mix(in srgb,currentColor 5%,transparent);border:1px solid color-mix(in srgb,currentColor 20%,transparent);border-radius:6px;padding:6px 8px;min-height:32px;min-width:0}
 .ur-sheets-embed input{flex:1;min-width:160px}.ur-sheets-embed button{cursor:pointer}.ur-sheets-embed select{max-width:220px}.ur-sheets-embed option{color:#222;background:white}.ur-sheets-embed a{color:inherit;white-space:nowrap;text-decoration:none}.ur-sheets-embed button:hover{background:color-mix(in srgb,currentColor 12%,transparent)}.ur-sheets-embed :focus-visible{outline:2px solid #60a5fa;outline-offset:2px}.ur-sheets-embed iframe{display:block;border:0;width:100%;flex:1;min-height:240px;background:#fff}.ur-sheets-embed footer{font-size:11px;opacity:.65;padding:6px 10px}.ur-sheets-embed [role=alert]{padding:10px;color:#e99080}.ur-sheets-embed .sheet-empty{flex:1;padding:40px;text-align:center;opacity:.7}
 @container(max-width:500px){.ur-sheets-embed input{order:5;flex-basis:75%}.ur-sheets-embed .sheet-bar{gap:6px}.ur-sheets-embed .sheet-bar>select:first-child{max-width:150px}}
+/* Follow World's existing theme attribute. The Google document remains remote;
+   transform the rendered surface without touching its content or permissions. */
+:root[data-theme="dark"] .ur-sheets-embed iframe{
+  filter:invert(1) hue-rotate(180deg) brightness(.9) contrast(.9);
+  color-scheme:light;
+}
+:root[data-theme="light"] .ur-sheets-embed iframe{
+  filter:none;
+  color-scheme:light;
+}
